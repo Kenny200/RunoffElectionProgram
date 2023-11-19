@@ -23,6 +23,9 @@ public class RunoffElection {
             }
         }
 
+        // Remove the ballots with a null candidate.
+        ballots.removeIf(ballot -> ballot.getCandidate() == null);
+
         // Repeat steps 2 and 3 until there is only one candidate remaining.
         if (ballots.size() > 1) {
             return simulateRunoffElection();
