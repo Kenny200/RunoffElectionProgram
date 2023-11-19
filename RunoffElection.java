@@ -1,9 +1,9 @@
 //Kenneth Ortega November 17,2023
 import java.util.List;
-
+//runoffelection class file
 public class RunoffElection {
     private List<Ballot> ballots;
-
+    //create a election object
     public RunoffElection(List<Ballot> ballots) {
         this.ballots = ballots;
     }
