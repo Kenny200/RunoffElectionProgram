@@ -60,6 +60,5 @@ public class BalloutDemo {
     public static void main(String[] args) {
     	BalloutDemo demo = new BalloutDemo();
         String winner = demo.simulateRunoffElection();
-        //System.out.println(winner + "is the winner");
     }
 }
