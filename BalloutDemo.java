@@ -14,6 +14,16 @@ public class BalloutDemo {
     }
 
     public String simulateRunoffElection() {
+    //Print the Ballots and Results
+        if (ballots.size() > 1) {
+        System.out.println("Round results:");
+        for (Ballot ballot : ballots) {
+            System.out.println(ballot.getCandidate() + ": " + ballot.getPreferences());
+        }
+        System.out.println();
+        
+        return simulateRunoffElection();
+    }
         ballots.sort((b1, b2) -> Integer.compare(b2.getPreferences().indexOf(b2.getCandidate()), b1.getPreferences().indexOf(b1.getCandidate())));
 
         String eliminatedCandidate = ballots.get(ballots.size() - 1).getCandidate();
